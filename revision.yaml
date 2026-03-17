@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: apps
+  namespace: argocd
+
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/TU_USUARIO/test-argocd.git
+    targetRevision: main
+    path: manifests/apps/_overlays
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
