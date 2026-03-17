@@ -8,7 +8,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/TU_USUARIO/test-argocd.git
+    repoURL: https://github.com/vkhj26/test-argocd.git
     targetRevision: main
     path: manifests/apps/_overlays
 
