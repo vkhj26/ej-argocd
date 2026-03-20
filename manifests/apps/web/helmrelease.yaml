@@ -7,13 +7,15 @@ spec:
   project: default
   source:
     repoURL: 'https://charts.bitnami.com/bitnami'
-    targetRevision: 15.0.0
+    targetRevision: 16.x # Versión más reciente del chart
     chart: nginx
     helm:
       values: |
+        image:
+          tag: latest
         staticSiteConfig:
           enabled: true
-          content: "<h1>¡Hola Valeria!</h1><p>Desplegado con ArgoCD.</p>"
+          content: "<h1>¡Hola Valeria!</h1><p>Desplegado con ArgoCD y Helm.</p>"
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
