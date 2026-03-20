@@ -1,7 +1,3 @@
-redis:
-  architecture: standalone
-  auth:
-    enabled: false
-  master:
-    service:
-      type: ClusterIP
+auth:
+  enabled: false # Para que conecte sin pedir contraseña en este ejemplo
+architecture: standalone

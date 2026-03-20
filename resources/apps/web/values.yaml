@@ -1,3 +1,1 @@
-nginx:
-  service:
-    type: ClusterIP
+# Configuración extra para Nginx si fuera necesaria
