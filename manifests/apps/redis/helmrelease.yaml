@@ -7,15 +7,15 @@ spec:
   project: default
   source:
     repoURL: 'https://charts.bitnami.com/bitnami'
-    targetRevision: 19.x # Usamos una versión más reciente del Chart
+    targetRevision: 19.0.0
     chart: redis
     helm:
       values: |
+        image:
+          tag: latest
         auth:
           enabled: false
         architecture: standalone
-        image:
-          tag: latest # Esto asegura que encuentre una imagen válida
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
