@@ -7,11 +7,13 @@ spec:
   project: default
   source:
     repoURL: 'https://charts.bitnami.com/bitnami'
-    targetRevision: 19.1.1
+    targetRevision: 18.x.x
     chart: redis
     helm:
       values: |
         image:
+          registry: docker.io
+          repository: bitnamilegacy/redis
           tag: latest
         auth:
           enabled: false
