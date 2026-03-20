@@ -15,6 +15,7 @@ spec:
           registry: docker.io
           repository: bitnamilegacy/nginx
           tag: latest
+          pullPolicy: Always
         staticSiteConfig:
           enabled: true
           content: "<h1>GitOps com Bitnami Legacy!</h1>"
