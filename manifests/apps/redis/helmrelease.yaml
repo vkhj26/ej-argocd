@@ -13,9 +13,8 @@ spec:
       values: |
         image:
           registry: docker.io
-          repository: bitnamilegacy/redis
-          tag: latest
-          pullPolicy: Always
+          repository: bitnami/redis
+          tag: 7.2.4
         auth:
           enabled: false
   destination:

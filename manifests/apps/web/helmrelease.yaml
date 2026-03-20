@@ -13,12 +13,11 @@ spec:
       values: |
         image:
           registry: docker.io
-          repository: bitnamilegacy/nginx
-          tag: latest
-          pullPolicy: Always
+          repository: bitnami/nginx
+          tag: 1.27.2
         staticSiteConfig:
           enabled: true
-          content: "<h1>GitOps com Bitnami Legacy!</h1>"
+          content: "<h1>GitOps con Bitnami!</h1>"
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
